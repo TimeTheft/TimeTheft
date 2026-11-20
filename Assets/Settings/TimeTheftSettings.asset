@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db9f8992171d7f4dbded573a99d072a, type: 3}
+  m_Name: TimeTheftSettings
+  m_EditorClassIdentifier: 
+  Rules:
+    InitialLifeHours: 50
+    MinimumHours: 1
+    MaximumHours: 12
+    NumberWeights: 
+    ExtraRedProbability: 0.5
+    FirstParticipant: 0
+    AiRiskTolerance: 0.5
+    EnableAiItemStrategy: 1
+    AiDecisionNoise: 0.08
+    AiItemConservation: 0.35
+    ScrewdriverReductionPercent: 50
+    TimeBypassPercent: 50
+    InitialItemCount: 2
+    ItemsPerBatch: 1
+    MaxHeldItems: 3
+    RevealOpponentItems: 1
+    ItemWeights: 
+  PreviewDuration: 4
+  ShuffleDuration: 1.1
+  AiThinkDuration: 0.45
+  RevealDuration: 0.55
+  TransferDuration: 0.85
+  ResultHoldDuration: 0.45
+  DiscardDuration: 0.65
+  BatchNoticeDuration: 0.8
+  TurnNoticeDuration: 0.35
+  AiActionNoticeDuration: 0.7
+  RandomSeed: 0
