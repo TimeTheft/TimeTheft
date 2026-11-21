@@ -17,17 +17,20 @@
 
 ## 현재 기술 구조
 
+현재 개발 기준은 [TimeTheft/TimeTheft](https://github.com/TimeTheft/TimeTheft)의 `main`, `C:\unity\TimeTheft`에 있는 독립 2D 프로젝트다.
+
 C#과 Unity 6 `6000.0.68f1`을 사용한다. 주요 패키지는 URP `17.0.4`, Input System `1.18.0`, uGUI `2.0.0`, Test Framework `1.6.0`, Timeline `1.8.10`, Coplay `v10.3.0`이다. [Editor 버전](../../ProjectSettings/ProjectVersion.txt) · [패키지 목록](../../Packages/manifest.json)
 
 | 위치 | 역할 |
 | --- | --- |
-| [TimeTheftTitle.unity](../../Assets/Scenes/TimeTheftTitle.unity) → [TimeTheftGame.unity](../../Assets/Scenes/TimeTheftGame.unity) | 현재 활성 빌드 씬 순서. [빌드 씬 설정](../../ProjectSettings/EditorBuildSettings.asset) |
+| [TimeTheft2DStageStudy.unity](../../Assets/Scenes/_Development/TimeTheft2DStageStudy.unity) · [2D StageStudy 코드](../../Assets/Scripts/Development/TimeTheft2DStageStudy.cs) | 현재 2D 개발 시안. 기존 Match·설정을 이용한 셔플·선택·취소·징수/배급·정산·재시작 UI를 제공하며 Preview·A/B 비교 씬을 함께 유지한다. 전체 대전 루프·AI·아이템 UI 연결이 완료된 상태는 아니다. |
+| [TimeTheftTitle.unity](../../Assets/Scenes/TimeTheftTitle.unity) → [TimeTheftGame.unity](../../Assets/Scenes/TimeTheftGame.unity) | 현재 활성 빌드 씬 순서로 유지한 3D 진입점. [빌드 씬 설정](../../ProjectSettings/EditorBuildSettings.asset) |
 | [Gameplay/Match](../../Assets/Scripts/Gameplay/Match) · [Gameplay/AI](../../Assets/Scripts/Gameplay/AI) | 시계 정보, 턴, 정산, 아이템, AI 판단을 다루는 게임 로직. |
-| [TimeTheftGameController](../../Assets/Scripts/Gameplay/TimeTheftGameController.cs) · [UI](../../Assets/Scripts/UI) · [Presentation](../../Assets/Scripts/Presentation) · [Camera](../../Assets/Scripts/Camera) | 모델 호출·진행·입력 연결 및 현재 3D 표시. 메인 씬에는 H2 회중시계, 공급 장치, 아이템 모델·해치, 상대 캐릭터, 계수기와 테이블이 연결돼 있다. |
+| [TimeTheftGameController](../../Assets/Scripts/Gameplay/TimeTheftGameController.cs) · [UI](../../Assets/Scripts/UI) · [Presentation](../../Assets/Scripts/Presentation) · [Camera](../../Assets/Scripts/Camera) | 기존 3D의 모델 호출·진행·입력 연결 및 표시. 메인 씬에는 H2 회중시계, 공급 장치, 아이템 모델·해치, 상대 캐릭터, 계수기와 테이블이 연결돼 있다. |
 | [개발 씬](../../Assets/Scenes/_Development) · [Development](../../Assets/Scripts/Development) | Study·Validation·시각 검토 및 제작 도구. |
 | [TimeTheft.Runtime.asmdef](../../Assets/Scripts/Core/TimeTheft.Runtime.asmdef) · [Tests](../../Assets/Tests) | Runtime 소속 폴더는 asmref로 연결하며 타이틀·아이템 애니메이션·Counter Study·테스트의 별도 어셈블리를 사용한다. EditMode와 PlayMode 테스트는 기존 어셈블리에서 실행한다. |
 
-현재 게임 로직과 3D 표현은 개발 기준점이다. 승인된 표현 변경에서는 기존 로직과 데이터의 재사용 범위를 확인하고 입력·카메라·UI·연출 등 연결에 미치는 영향을 검증한다. 에셋과 제작 원본의 보존을 포함한 현재 개발 방향은 [인수인계](../project/HANDOFF.md#개발-방향)를 참고한다.
+현재 개발 대상은 2D StageStudy 시안이다. Match·AI와 기존 3D 코드·에셋은 재사용·비교 기준으로 유지한다. 승인된 표현 변경에서는 입력·카메라·UI·연출 연결에 미치는 영향을 검증한다. 2026-11-20 독립화·최종 경로 검증 결과와 한계는 [인수인계](../project/HANDOFF.md)를 참고한다.
 
 ## 과거 구현·검증 기록
 

@@ -1,5 +1,19 @@
 # TimeTheft 개발 인수인계
 
+## 현재 개발 기준 — 2026-11-20
+
+- 개발 저장소는 [TimeTheft/TimeTheft](https://github.com/TimeTheft/TimeTheft), 기본 브랜치는 `main`, 최종 로컬 경로는 `C:\unity\TimeTheft`다. 기존 Worktree에서 새 Git 이력으로 독립했으며 초기 커밋은 `58a0d588`이다. `origin`은 `https://github.com/TimeTheft/TimeTheft.git`이고, 경로 정리 완료 당시 로컬 `main`과 원격 HEAD가 일치했다.
+- 2D는 [TimeTheft2DStageStudy](../../Assets/Scenes/_Development/TimeTheft2DStageStudy.unity)와 Preview·A/B 비교 씬의 시안 단계다. Match·AI·기존 3D 코드와 에셋·`.meta`를 보존했다. 전체 대전 루프·AI·아이템 UI 연결이 끝난 2D 게임을 의미하지 않는다. 빌드 목록은 기존 **TimeTheftTitle → TimeTheftGame**을 유지한다.
+- 최종 경로에서 Unity `6000.0.68f1` 배치 로드·컴파일, 2D 씬 4개의 스크립트·직접 참조 검사, StageStudy의 시작·셔플·선택·취소·징수·배급·재시작 UI 콜백 검사 7개가 통과했다. Assets·Packages·ProjectSettings의 내용과 GUID 832개를 보존했고 GUID 중복은 0개였다. 임시 검증 코드와 Unity의 자동 설정 변경은 정리했다.
+- 실제 마우스 입력·화면 렌더링·독립 Player·전체 테스트는 이번 경로 검증에서 실행하지 않았다. Unity MCP stdio 연결 인스턴스가 없어 배치 검증을 사용했다. 로컬 검증 근거는 `.utmp/final-cleanup/`에 있다.
+- 기존 3D는 [TimeTheft-3D](https://github.com/TimeTheft/TimeTheft-3D)에, 제작 원본·실험·제출 빌드는 비공개 [TimeTheft-Preservation](https://github.com/TimeTheft/TimeTheft-Preservation)에 보존한다. 3D 복원 기준 브랜치 `archive/3d-pre-2d`는 `fa44ba5`다. 구 Worktree 등록·폴더를 정상 제거하고, 3D와 임시 독립 프로젝트는 `C:\unity\TimeTheft-Backups\FinalCleanup_20261120_204951`의 `retired-3d`·`retired-independent`로 보존 이동했다. 기존 `Preservation_20261120_121908` 백업도 유지한다.
+
+---
+
+## 과거 기록 — 기존 3D 개발
+
+이하 전문은 2026-11-16까지의 3D 개발 기록이다. 각 절의 “현재”, 브랜치·커밋·로컬 경로·검증 수치는 해당 작업 시점을 뜻하며, 커밋은 기존 3D 저장소의 이력이다. 당시 `C:/unity/TimeTheft`는 3D 프로젝트를 가리킨다. `TimeTheft-Archive` 등 과거 보관 경로를 현재 위치로 해석하지 않으며, 현재 보존 위치는 위 기록을 따른다.
+
 ## 현재 개발 상태 — 2026-11-16
 
 ### 프로젝트 구조와 구현

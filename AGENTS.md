@@ -2,6 +2,8 @@
 
 TimeTheft는 Unity로 개발을 이어가는 1인 게임 프로젝트다. 사용자와의 소통과 프로젝트 문서는 한국어로 작성한다.
 
+현재 폴더는 [TimeTheft/TimeTheft](https://github.com/TimeTheft/TimeTheft)의 독립 2D 개발 저장소다. 기본 브랜치는 `main`, 기준 경로는 `C:\unity\TimeTheft`다. 기존 3D 자료는 [TimeTheft-3D](https://github.com/TimeTheft/TimeTheft-3D)와 비공개 [TimeTheft-Preservation](https://github.com/TimeTheft/TimeTheft-Preservation), 로컬 보존 백업에 있다.
+
 ## 작업 원칙
 
 - 한 번에 하나의 요청에 집중한다. 관련 코드·문서·의존성만 확인하고, 승인된 범위에서 조사·구현·검증을 마친다.
